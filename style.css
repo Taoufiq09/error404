@@ -1,6 +1,43 @@
-.page_404{
-	overflow-x: hidden;
-}
+html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+
+
+body {
+	background-image: url(dbet1if-e2a802e8-8ddc-4ff5-acd3-5a5990f5e57d.gif);
+	background-size: cover;
+    background-position: center;
+	max-width: 100%;
+  }
+  
+  @keyframes fondu {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
+  }
+  
+
+p {
+	color: brown;
+  }
+  
+  @keyframes mouvement {
+	0% {
+	  transform: translateX(0);
+	}
+	100% {
+	  transform: translateX(100px);
+	}
+  }
+
 
 .jumbotron {
 	margin-top: 6em;
@@ -8,16 +45,82 @@
 	min-width: 385px;
 	margin-left: auto;
 	margin-right: auto;
+	font-style: italic;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Abhaya Libre", serif;
 	font-weight: 700;
+	color: #fff;
 }
 
-a, p {
-	font-family: "Nunito", sans-serif;
-	font-weight: 400;
-	font-size: 1.1rem;
-}
 
+button {
+	font-family: "Abhaya Libre", serif;
+	font-weight: 700;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 10px 10px 5px 0px rgba(212, 102, 102, 0.75);
+	animation: vibrate 0.40s ease-in-out infinite;
+  }
+  @keyframes vibrate {
+	0% {
+	  transform: translate(0);
+	}
+	20% {
+	  transform: translate(-2px, 2px);
+	}
+	40% {
+	  transform: translate(-2px, -2px);
+	}
+	60% {
+	  transform: translate(2px, -2px);
+	}
+	80% {
+	  transform: translate(2px, 2px);
+	}
+	100% {
+	  transform: translate(0);
+	}
+  }
+  
+  
+  button:hover {
+	background-color: rgb(57, 209, 57);
+	color: #333;
+  }
+ .circle{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+ }
+
+ .loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	width: 100px;
+  }
+  
+  .loading span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgb(241, 238, 238);
+	animation: mouvement 2s linear infinite;
+	margin: 0 5px;
+  }
+  
+  @keyframes mouvement {
+	0%, 80%, 100% {
+	  transform: scale(0);
+	}
+	40% {
+	  transform: scale(1);
+	}
+  }
